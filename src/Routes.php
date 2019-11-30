@@ -5,6 +5,7 @@ namespace App;
     use Components\Router\Router;
 
     Router::route(GET, '/heartbeat', 'HeartbeatController', 'ping');
+    Router::route(GET, '/testConnect', 'HeartbeatController', 'connect');
 
     Router::route(POST, '/criarExercicio', 'PersonalController', 'criarExercicio');
     Router::route(GET, '/buscaExercicio', 'PersonalController', 'buscaExercicio');

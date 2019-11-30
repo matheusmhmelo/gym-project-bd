@@ -1,6 +1,9 @@
 {
     "require": {
-        "monolog/monolog": "1.0.*"
+        "monolog/monolog": "1.0.*",
+        "taq/pdooci": "^1.0",
+        "ext-pgsql": "*",
+        "ext-oci8": "*"
     },
     "autoload": {
         "psr-4": {
