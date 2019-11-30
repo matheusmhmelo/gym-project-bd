@@ -29,8 +29,13 @@ namespace Components\Database;
                 $set['user'],
                 $set['password']
             );
-var_dump(oci_connect($conString));
+
             $this->conn = pg_connect($conString);
+
+//            insert into aparelhos (aparelho.codigo, aparelho.nome, aparelho.musculo, aparelho.identificacao) values ('1', 'test', 'braco', '1')
+            $query = 'select * from aparelhos';
+            $result = pg_query($query);
+            var_dump(pg_fetch_array($result, null, PGSQL_ASSOC));exit;
 
             if ($this->conn->connect_errno > 0) {
                 die("Connection failed [" . $this->conn->connect_error . "]");
